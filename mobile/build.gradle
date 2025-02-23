@@ -82,38 +82,3 @@ dependencies {
 
     wearApp project(':wearable')
 }
-
-
-apply plugin: 'com.localazy.gradle'
-
-localazy {
-    readKey "a8358596450190348286-6c93f41a75d8ced983708bf35c1da00c0bb4bda7c986e350f15809df8c3fd25b"
-    writeKey "${localazy.writeKey}"
-
-    injection {
-        installRepositories false
-        enabledForRelease false
-        enabledForDebug false
-    }
-
-    upload {
-        ignoreMissingDefault true
-        deprecateMissing false
-        defaultLang "en"
-        showUploadAll true
-
-        files {
-            exclude "*/arrays.xml"
-        }
-    }
-
-    download {
-        enabledForRelease true
-        errorOnFailureDebug false
-        redownloadInterval 900
-    }
-
-    resources {
-        enabledForRelease true
-    }
-}

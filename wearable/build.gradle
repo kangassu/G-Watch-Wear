@@ -56,16 +56,3 @@ dependencies {
 
     implementation files('libs/holocolorpicker-2.0.aar')
 }
-
-
-apply plugin: 'com.localazy.gradle'
-
-localazy {
-    copyFrom project(":mobile")
-    upload {
-        ignoreMissingDefault true
-        deprecateMissing false
-        defaultLang "en"
-        showUploadAll true
-    }
-}
